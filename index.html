@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="lo">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff4f3">
+  <title>Kapok</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+Lao:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="scene">
+    <div class="glow glow-one" aria-hidden="true"></div>
+    <div class="glow glow-two" aria-hidden="true"></div>
+    <div class="sparkle sparkle-one" aria-hidden="true">✦</div>
+    <div class="sparkle sparkle-two" aria-hidden="true">✧</div>
+    <div class="sparkle sparkle-three" aria-hidden="true">✦</div>
+
+    <article class="letter-card" id="letter-card">
+      <div class="eyebrow"><span class="tiny-heart" aria-hidden="true">♥</span> A NOTE FROM MY HEART</div>
+      <div class="flower" aria-hidden="true">🌷</div>
+      <h1>ມີແນວຈະບອກບອກ...</h1>
+      <p class="message" id="message">ເວັບນີ້ສ້າງເພື່ອບອກຄວາມໃນໃຈຍ້ອນບໍ່ກ້າເວົ້າເອງ ສະຕາຍ Introvert ນັ້ນລະ
+        <span>ຢ່າວ່າກັນເດີ້ອັນນິມືໃໝ່ TT</span>
+      </p>
+      <div class="signature">with a little courage <span>♡</span></div>
+      <button class="primary-button" id="open-button" type="button">Continue <span aria-hidden="true">→</span></button>
+      <div class="card-footer"><span>TAKE YOUR TIME</span><span class="footer-heart" aria-hidden="true">♡</span></div>
+    </article>
+
+    <section class="letter-card password-card" id="password-card" hidden aria-labelledby="password-title">
+      <button class="back-button" id="back-button" type="button" aria-label="Back">←</button>
+      <div class="eyebrow"><span class="tiny-heart" aria-hidden="true">♥</span> JUST ONE LITTLE QUESTION</div>
+      <div class="flower lock-flower" aria-hidden="true">🤪</div>
+      <h1 id="password-title">ຄຳຕອບຢູ່ໃສກະບໍ່ຮູ້ຫາເອົາ...</h1>
+      <p class="message">ລະຫັດງ່າຍໆດອກບໍ່ຍາກ ລອງຄິດເບີ່ງ🙃</p>
+      <form id="password-form">
+        <label class="visually-hidden" for="password-input">Password</label>
+        <input id="password-input" name="password" type="password" placeholder="Type the secret word..." autocomplete="off" required>
+        <button class="primary-button" type="submit">Unlock <span aria-hidden="true">♡</span></button>
+      </form>
+      <p class="hint" id="password-hint" aria-live="polite">Clue: it's your birthday</p>
+      <div class="card-footer"><span>ONLY YOU KNOW</span><span class="footer-heart" aria-hidden="true">♡</span></div>
+    </section>
+
+    <section class="letter-card result-card" id="result-card" hidden aria-live="polite">
+      <div class="eyebrow"><span class="tiny-heart" aria-hidden="true">♥</span> A LITTLE MESSAGE</div>
+      <div class="flower" id="result-icon" aria-hidden="true">💗</div>
+      <h1 id="result-title">...</h1>
+      <p class="message" id="result-message"></p>
+      <button class="primary-button" id="retry-button" type="button" hidden>Try again <span aria-hidden="true">↻</span></button>
+      <div class="card-footer"><span>WITH CARE</span><span class="footer-heart" aria-hidden="true">♡</span></div>
+    </section>
+
+    <section class="letter-card story-card" id="story-card" hidden aria-labelledby="story-title">
+      <div class="eyebrow"><span class="tiny-heart" aria-hidden="true">♥</span> SOMETHING FROM MY HEART</div>
+      <div class="flower" aria-hidden="true">🕊️</div>
+      <h1 id="story-title">...</h1>
+      <p class="message story-message" id="story-message"></p>
+      <div class="story-question" id="story-question" hidden>
+        <p class="question-label">ONE LITTLE QUESTION</p>
+        <p class="question-text" id="question-text"></p>
+        <div class="answer-buttons">
+          <button class="answer-button yes-button" id="yes-button" type="button">Ok</button>
+          <button class="answer-button no-button" id="no-button" type="button">Br</button>
+        </div>
+      <p class="save-status" id="save-status" aria-live="polite"></p>
+      </div>
+      <div class="card-footer"><span>TAKE YOUR TIME</span><span class="footer-heart" aria-hidden="true">♡</span></div>
+    </section>
+    <p class="page-note">made with care, just for you <span aria-hidden="true">♡</span></p>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
