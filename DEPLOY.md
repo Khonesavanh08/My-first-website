@@ -8,6 +8,14 @@
 2. ເຂົ້າ [Netlify](https://app.netlify.com/), ເລືອກ **Add new project → Import an existing project**, ແລ້ວເລືອກ repository.
 3. ໃຫ້ publish directory ເປັນ `.` ແລະ deploy. ເຈົ້າຈະໄດ້ URL ສຳລັບແຊ.
 
+## ທາງເລືອກ: Cloudflare Pages
+
+ໂຄງການນີ້ມີ Cloudflare Pages Function ຢູ່ `functions/api/answer.js` ສຳລັບຮັບຄຳຕອບ. ສາມາດເຊື່ອມ repository ດຽວກັນໃນ Cloudflare Pages ແລະກຳນົດ build command ເປັນຫວ່າງ, output directory ເປັນ `.`. ຫຼັງຈາກ deploy ແລ້ວ ຕ້ອງເພີ່ມ `ANSWER_SHEET_TOKEN` ໃນ **Settings → Variables and Secrets** ແລະ redeploy ເພື່ອເປີດການບັນທຶກຄຳຕອບ.
+
+## ໃຊ້ Cloudflare Worker ໂຕເກົ່າ
+
+ສຳລັບ Worker `my-first-website` ທີ່ມີ URL `workers.dev`, ໃຫ້ໃຊ້ `worker.js` ແລະ `wrangler.jsonc` ໃນ repository. ຕັ້ງ deploy command ໃຫ້ໃຊ້ `npx wrangler deploy`, ແລ້ວເພີ່ມ Secret ຊື່ `ANSWER_SHEET_TOKEN` ຜ່ານ **Workers & Pages → my-first-website → Settings → Variables and Secrets**. Secret value ແມ່ Master Key JSONBin. Deploy Worker ໃໝ່; code ຈະເກັບ asset ໜ້າເວັບເກົ່າ ແລະຮັບ `POST /api/answer` ຢູ່ Worker ດຽວກັນ.
+
 ## ເປີດການບັນທຶກຄຳຕອບ
 
 1. ສ້າງ JSONBin account ແລະຄັດລອກ **Master Key** ຈາກ dashboard. ຢ່າໃສ່ key ນີ້ໃນ HTML ຫຼື JavaScript ຂອງໜ້າເວັບ.
